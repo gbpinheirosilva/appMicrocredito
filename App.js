@@ -47,7 +47,7 @@ export default class ButtonBasics extends Component {
             color="#ec5829"
           />
         </View>
-        <View style={styles.botao}>
+        <View style={styles.botaoWP}>
           <Button
             onPress={this._onPressButton4}
             title="Fale Conosco pelo WhatsApp"
@@ -89,6 +89,17 @@ const styles = StyleSheet.create({
     backgroundColor:'#ec5829',
     borderRadius:10,
   },
+  botaoWP: {
+    marginTop:20,
+    paddingTop: 15,
+    paddingBottom:15 ,
+    paddingLeft:5,
+    paddingRight: 5,
+    marginLeft:40,
+    marginRight:40,
+    backgroundColor:'#ec5829',
+    borderRadius:10,
+  },
   botao_sobreBP: {
     marginTop: 20,
     paddingTop: 15,
@@ -101,10 +112,10 @@ const styles = StyleSheet.create({
   logo: {
     height: 300,
     width: 250,
-    marginBottom: 30
+    marginBottom: -40,
   },
   parceiros: {
-    marginTop:160,
+    marginTop:25,
     backgroundColor: '#ffff',
     height: 80,
     resizeMode:'contain',
