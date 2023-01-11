@@ -10,7 +10,7 @@ export default class ButtonBasics extends Component {
       );
   }
   _onPressButton2() {
-    Linking.openURL('https://bancopreventorio.org.br/');  }
+    Linking.openURL('https://forms.gle/sCyCungsdS3VNmZg9');  }
 
   _onPressButton3() {
     Linking.openURL('https://bancopreventorio.org.br/');
