@@ -2,6 +2,8 @@
 
 
 ##### To install Reac-native-navigation follow the steps below:
-'''
+```
 npm install @react-navigation/native
-'''
+
+
+```
