@@ -1,7 +1,9 @@
 import { useNavigation } from '@react-navigation/core'
 import React, { useEffect, useState } from 'react'
 import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Image } from 'react-native';
 // import { auth } from '../firebase'
+
 
 const LoginScreen = () => {
 //   const [email, setEmail] = useState('')
@@ -38,15 +40,17 @@ const LoginScreen = () => {
 //       })
 //       .catch(error => alert(error.message))
 //   }
-    const changeScreen = () => {
-        navigation.navigate('Home');
-    }
+    
 
   return (
     <KeyboardAvoidingView
       style={styles.container}
       behavior="padding"
     >
+
+      <Image
+                source={require('../assets/LogoBP.png')}
+                style={styles.logo} />
       <View style={styles.inputContainer}>
         <TextInput
           placeholder="Email"
@@ -55,7 +59,7 @@ const LoginScreen = () => {
           style={styles.input}
         />
         <TextInput
-          placeholder="Password"
+          placeholder="Senha"
         //   value={password}
         //   onChangeText={text => setPassword(text)}
           style={styles.input}
@@ -71,10 +75,10 @@ const LoginScreen = () => {
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={changeScreen}
+          //onPress={handleSignUp}
           style={[styles.button, styles.buttonOutline]}
         >
-          <Text style={styles.buttonOutlineText}>Register</Text>
+          <Text style={styles.buttonOutlineText}>Cadastre-se</Text>
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
@@ -88,10 +92,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#3a7e52',
   },
   inputContainer: {
     width: '80%'
   },
+  logo: {
+    height: 300,
+    width: 250,
+    marginBottom: -20,
+    marginTop: -200,
+},
   input: {
     backgroundColor: 'white',
     paddingHorizontal: 15,
@@ -106,7 +117,7 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
   button: {
-    backgroundColor: '#0782F9',
+    backgroundColor: '#ec5829',
     width: '100%',
     padding: 15,
     borderRadius: 10,
@@ -115,7 +126,7 @@ const styles = StyleSheet.create({
   buttonOutline: {
     backgroundColor: 'white',
     marginTop: 5,
-    borderColor: '#0782F9',
+    borderColor: '#ec5829',
     borderWidth: 2,
   },
   buttonText: {
@@ -124,7 +135,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   buttonOutlineText: {
-    color: '#0782F9',
+    color: '#ec5829',
     fontWeight: '700',
     fontSize: 16,
   },
